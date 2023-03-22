@@ -2,6 +2,10 @@ def encode(password):
     listpass = list(password)
     for i in range(0, len(listpass)):
         listpass[i] = str(int(listpass[i]) + 3)
+	if int(listpass[i]) >= 10:
+		listpass[i] = str(int(listpass[i]) - 10)
+	else:
+		continue
     newlist = ''.join(listpass)
     return newlist
 
